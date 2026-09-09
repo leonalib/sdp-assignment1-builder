@@ -1,7 +1,3 @@
-/**
- * Director: knows the ORDER of builder calls for known car configurations.
- * It does not know HOW each part is built — that's the Builder's job.
- */
 public class CarDirector {
 
     public Car makeSportsCar(Car.Builder builder) {

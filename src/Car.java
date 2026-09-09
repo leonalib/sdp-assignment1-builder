@@ -1,8 +1,3 @@
-/**
- * Product: Car.
- * The Builder is a static nested class right inside Car — this is the
- * exact style shown in the lecture's Car.Builder example.
- */
 public class Car {
 
     // Required
@@ -37,11 +32,7 @@ public class Car {
                 '}';
     }
 
-    /**
-     * Builder for Car.
-     * Every setter returns "this" (the builder itself) so calls can be
-     * chained: new Car.Builder().setModel(...).setSeats(...).build()
-     */
+
     public static class Builder {
 
         private static final String DEFAULT_ENGINE = "1.6L Petrol";
@@ -84,11 +75,7 @@ public class Car {
             return this;
         }
 
-        /**
-         * Clean Code principle: Validated construction.
-         * build() checks the required fields first and throws a clear
-         * error instead of silently creating a broken Car.
-         */
+
         public Car build() {
             validate();
             return new Car(this);
